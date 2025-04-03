@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2374839897271519458}
   - component: {fileID: 1251545133906977194}
   - component: {fileID: 2241205416221936426}
+  - component: {fileID: -3569955262118904160}
   - component: {fileID: 8981992309876733413}
   m_Layer: 0
   m_Name: Matteo
@@ -62,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 031d3ba33784a3bc69dde94327e1a56b, type: 2}
+  - {fileID: 2100000, guid: 3678ebb203625e11cacda347d9e935d1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,6 +85,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-3569955262118904160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7094582618594838405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf7255c9c463d8b2a03125f46ea9ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitsTaken: 0
+  scaleIncreaseFactor: 1.1
 --- !u!65 &8981992309876733413
 BoxCollider:
   m_ObjectHideFlags: 0
