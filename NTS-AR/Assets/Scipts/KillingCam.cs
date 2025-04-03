@@ -65,15 +65,6 @@ public class KillingCam : MonoBehaviour
                 
                 if (enemyComponent != null)
                 {
-                    if (ParticleEffect == null) {
-                         Debug.LogWarning("ParticleEffect prefab not assigned in Inspector!");
-                    } else {
-                        var clone = Instantiate(ParticleEffect, hitObj.transform.position, Quaternion.identity);
-                        // ... (rest of particle logic)
-                        ParticleSystem ps = clone.GetComponent<ParticleSystem>();
-                        Destroy(clone, ps != null ? ps.main.duration + ps.main.startLifetime.constantMax : 5f);
-                    }
-
                     // Call TakeHit on the actual Enemy component instance
                     if (10 > enemyComponent.TakeHit())
                     {
@@ -84,6 +75,15 @@ public class KillingCam : MonoBehaviour
                     }
                     else
                     {
+                        if (ParticleEffect == null) {
+                            Debug.LogWarning("ParticleEffect prefab not assigned in Inspector!");
+                        } else {
+                            var clone = Instantiate(ParticleEffect, hitObj.transform.position, Quaternion.identity);
+                            // ... (rest of particle logic)
+                            ParticleSystem ps = clone.GetComponent<ParticleSystem>();
+                            ps.Play();
+                            Destroy(clone, ps != null ? ps.main.duration + ps.main.startLifetime.constantMax : 5f);
+                        }
                         Destroy(hitObj); 
                     }
                     
